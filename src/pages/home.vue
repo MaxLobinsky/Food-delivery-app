@@ -1,20 +1,32 @@
 <template>
   <div>
-  <div>
-    <NavBar />
+    <div>
+      <NavBar />
+    </div>
+    <div class="shop-container">
+      <ShopList @handleShopClick="handleShopClick" :items="items" />
+      <FoodList :items="shops" />
+    </div>
   </div>
-  <div class="shop-container">
-    <ShopList />
-    <FoodList />
-  </div>
-</div>
 </template>
 
 <script>
 import ShopList from "@/components/ShopList.vue";
 import FoodList from "@/components/FoodList.vue";
 import NavBar from "@/components/NavBar.vue";
+import items from "@/seeders/items";
 export default {
+  data() {
+    return {
+      items: items,
+      shops: null,
+    };
+  },
+  methods: {
+    handleShopClick(id) {
+      this.shops=items[id-1].food
+    },
+  },
   components: {
     ShopList,
     FoodList,

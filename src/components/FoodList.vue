@@ -1,11 +1,11 @@
 <template>
   <div class="food-list">
-    <FoodCard />
-    <FoodCard />
-    <FoodCard />
-    <FoodCard />
-    <FoodCard />
-    <FoodCard />
+    <FoodCard
+      v-for="item in items"
+      :key="item"
+      :title="item.title"
+      :price="item.price"
+    />
   </div>
 </template>
 <script>
@@ -14,9 +14,14 @@ export default {
   components: {
     FoodCard,
   },
+  props: {
+    items: {
+      type: Array,
+      default: [],
+    },
+  },
 };
 </script>
-
 
 <style>
 .food-list {
@@ -24,6 +29,6 @@ export default {
   width: 70%;
   height: auto;
   display: grid;
-  grid-template-columns: repeat(2, auto)
+  grid-template-columns: repeat(2, auto);
 }
 </style>

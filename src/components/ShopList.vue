@@ -7,14 +7,37 @@
       </div>
     </div>
     <div class="shops">
-      <p class="shop">McDonald's</p>
-      <p class="shop">KFC</p>
-      <p class="shop">Темпо</p>
-      <p class="shop">ДоДо пицца</p>
-      <p class="shop">Гирос-Кебаб</p>
+      <div
+        class="shop"
+        @click="setCafe(item)"
+        v-for="item in items"
+        :key="item"
+      >
+        {{ item.title }}
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    items: {
+      type: Array,
+      required: true,
+    },
+    isActive: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    setCafe(item) {
+      this.$emit("handleShopClick", item.id);
+    },
+  },
+};
+</script>
 
 <style>
 .shop-list {
@@ -23,11 +46,6 @@
   height: auto;
   display: flex;
   flex-direction: column;
-}
-.shops {
-  width: 252px;
-  height: auto;
-  background-color: #c0ef69;
 }
 .utp {
   width: 252px;
@@ -41,8 +59,18 @@
   padding: 20px 33px 40px 30px;
 }
 .shop {
-  border-bottom: 3px solid #FFFFFF;
-  margin: 2px;
+  box-sizing: border-box;
+  width: 252px;
+  height: 42px;
+  background-color: #c0ef69;
+  border-bottom: 3px solid #ffffff;
   padding-left: 30px;
+}
+.shop:hover {
+  background-color: #9ddd2a;
+  cursor: pointer;
+}
+.isActive {
+  background-color: #9ddd2a;
 }
 </style>
