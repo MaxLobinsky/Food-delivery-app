@@ -4,7 +4,7 @@
       <NavBar />
     </div>
     <div class="shop-container">
-      <ShopList @handleShopClick="handleShopClick" :items="items" />
+      <ShopList @handleShopClick="handleShopClick" :items="ITEMS" />
       <FoodList :items="shops" />
     </div>
   </div>
@@ -14,13 +14,16 @@
 import ShopList from "@/components/ShopList.vue";
 import FoodList from "@/components/FoodList.vue";
 import NavBar from "@/components/NavBar.vue";
+import {mapGetters} from "vuex";
 import items from "@/seeders/items";
 export default {
   data() {
     return {
-      items: items,
       shops: null,
     };
+  },
+  computed: {
+    ...mapGetters(['ITEMS']),
   },
   methods: {
     handleShopClick(id) {

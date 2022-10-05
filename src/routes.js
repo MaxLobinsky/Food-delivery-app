@@ -8,6 +8,7 @@ const routerHistory = createWebHashHistory();
 
 import HomePage from "./pages/home";
 import AboutPage from "./pages/about";
+import BasketPage from "./pages/basket";
 import NotFoundPage from "./pages/notFound";
 
 const routers = createRouter({
@@ -18,10 +19,15 @@ const routers = createRouter({
       name: "home",
       component: HomePage,
     },
-    {
+/*     {
       path: "/about",
       name: "about",
       component: AboutPage,
+    }, */
+    {
+      path: "/basket",
+      name: "basket",
+      component: BasketPage,
     },
     {
       path: "/:CatchAll(.*)*",

@@ -1,13 +1,14 @@
 <template>
   <div class="food-card">
+  <form @submit="onSubmit" >
     <div>{{ title }}</div>
     <div>{{ price * count }} BYN</div>
-    <button class="btn"><div class="btn-text">Заказать</div></button>
-    <br/>
-    <button @click="countMinus">-</button>
     <input class="food-prise" v-model="count" />
-    <button @click="countPlus">+</button>
-  </div>
+    <button type="submit" class="btn"><div class="btn-text">Заказать</div></button>
+  </form>
+  <button @click="countMinus">-</button>
+  <button @click="countPlus">+</button>
+</div>
 </template>
 
 <script>
@@ -18,6 +19,9 @@ export default {
     };
   },
   methods: {
+    onSubmit() {
+      this.$emit("handleFoodClick", this.title, this.count, this.price);
+    },
     countPlus() {
       this.count++;
     },
@@ -42,7 +46,7 @@ export default {
   color: #ffffff;
 }
 .food-prise {
-text-align: center;
+  text-align: center;
 }
 .food-card {
   width: 404px;
@@ -52,6 +56,7 @@ text-align: center;
   background: #ffffff;
   border-radius: 0px 125px 0px 150px;
   margin: 25px;
+  box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.06);
 }
 /* .food-card:hover {
   animation: 1.2s ease-in-out 0s normal none infinite running trambling-animation;

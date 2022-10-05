@@ -12,13 +12,18 @@ export const app = {
 
 export const links = [
   {
-    title: "Home",
+    title: "Рестораны",
     alias: "home",
     url: "/",
   },
-  {
+/*   {
     title: "About",
     alias: "about",
     url: "/about",
+  }, */
+  {
+    title: "Мой заказ",
+    alias: "basket",
+    url: "/basket",
   },
 ];
