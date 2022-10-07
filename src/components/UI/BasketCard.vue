@@ -1,39 +1,41 @@
 <template>
-  <div class="food-card">
+  <div class="basket-card">
     <div>
       <div>{{ item.title }}</div>
-      <div>{{ (item.price * count).toFixed(2) }} BYN</div>
-      <input class="food-prise" v-model="count" />
-      <button @click="onSubmit" class="btn">
-        <div class="btn-text">Заказать</div>
-      </button>
+      <div>{{ (item.price * item.count).toFixed(2) }} BYN</div>
+      <input class="food-prise" v-model="item.count" />
       <button @click="countMinus">-</button>
       <button @click="countPlus">+</button>
+      <span style="cursor: pointer" @click="deleteFromBasket">X</span>
+      <!--       <button @click="onSubmit" class="btn">
+        <div class="btn-text">Заказать</div>
+      </button> -->
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      count: 1,
-    };
-  },
   methods: {
+    ...mapActions(["DELETE_FROM_BASKET"]),
     onSubmit() {
       this.$emit(
         "handleFoodClick",
         this.item.title,
-        this.count,
+        this.item.count,
         this.item.price
       );
     },
     countPlus() {
-      this.count++;
+      this.item.count++;
     },
     countMinus() {
-      if (this.count > 1) this.count--;
+      if (this.item.count > 0) this.item.count--;
+      if (this.item.count === 0) this.deleteFromBasket();
+    },
+    deleteFromBasket() {
+      this.$emit("deleteFromBasket");
     },
   },
   props: {
@@ -44,20 +46,20 @@ export default {
   },
 };
 </script>
-<style>
+
+  <style>
 .btn-text {
   color: #ffffff;
 }
 .food-prise {
   text-align: center;
 }
-.food-card {
+.basket-card {
   width: 404px;
   height: 220px;
   left: 41px;
   top: 30px;
   background: #ffffff;
-  border-radius: 0px 125px 0px 150px;
   margin: 25px;
   box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.06);
 }

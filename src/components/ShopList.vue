@@ -9,9 +9,10 @@
     <div class="shops">
       <div
         class="shop"
-        @click="setCafe(item)"
-        v-for="item in items"
+        v-for="(item, index) in items"
         :key="item"
+        @click="setCafe(index), isActive=index"
+        :class="{ isActive: isActive == index }"
       >
         {{ item.title }}
       </div>
@@ -23,7 +24,7 @@
 export default {
   props: {
     items: {
-      type: Array,
+      type: Object,
       required: true,
     },
     isActive: {
@@ -32,14 +33,14 @@ export default {
     },
   },
   methods: {
-    setCafe(item) {
-      this.$emit("handleShopClick", item.id);
+    setCafe(index) {
+      this.$emit("handleShopClick", index);
     },
   },
 };
 </script>
 
-<style>
+<style lang="scss">
 .shop-list {
   background: transparent;
   width: 411px;
@@ -65,6 +66,9 @@ export default {
   background-color: #c0ef69;
   border-bottom: 3px solid #ffffff;
   padding-left: 30px;
+  &.isActive {
+    background-color: #9ddd2a;
+  }
 }
 .shop:hover {
   background-color: #9ddd2a;

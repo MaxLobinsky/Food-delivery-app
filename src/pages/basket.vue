@@ -1,17 +1,19 @@
 <template>
-  <div class="md-body">
+  <div >
     <div>
       <NavBar />
     </div>
-    <div class="food-list">
-      <FoodList :items="BASKET" />
+    <div class="basket-container">
+      <ClientForm />
+      <BasketList :items="BASKET" />
     </div>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
-import FoodList from "@/components/FoodList.vue";
+import ClientForm from "@/components/ClientForm.vue";
+import BasketList from "@/components/BasketList.vue";
 import { mapGetters } from "vuex";
 
 export default {
@@ -20,17 +22,16 @@ export default {
   },
   components: {
     NavBar,
-    FoodList,
+    BasketList,
+    ClientForm,
   },
 };
 </script>
 
 <style>
-  .food-list {
-    background: transparent;
-    width: 70%;
-    height: auto;
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-  }
-  </style>
+.basket-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+</style>

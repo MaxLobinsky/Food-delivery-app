@@ -14,20 +14,19 @@
 import ShopList from "@/components/ShopList.vue";
 import FoodList from "@/components/FoodList.vue";
 import NavBar from "@/components/NavBar.vue";
-import {mapGetters} from "vuex";
-import items from "@/seeders/items";
+import { mapGetters } from "vuex";
 export default {
+  computed: {
+    ...mapGetters(["ITEMS"]),
+  },
   data() {
     return {
-      shops: null,
+      shops: this.$store.state.items[0].food, /* items[0].food */
     };
   },
-  computed: {
-    ...mapGetters(['ITEMS']),
-  },
   methods: {
-    handleShopClick(id) {
-      this.shops=items[id-1].food
+    handleShopClick(index) {
+      this.shops = this.ITEMS[index].food;
     },
   },
   components: {

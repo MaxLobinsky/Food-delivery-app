@@ -2,24 +2,30 @@ import Vuex from "vuex";
 
 let store = new Vuex.Store({
   mutations: {
-    /*      SET_ITEMS_TO_STATE: (state, items) => {
-      state.items = items;
-    }, */
-    SET_BASKET: (state, title) => {
-      state.backet.push(title);
-      console.log(state.backet);
+    SET_BASKET: (state, food) => {
+      if (state.backet.length) {
+        let isFoodExist = false;
+        state.backet.map((item) => {
+          if (item.title === food.title) {
+            isFoodExist = true;
+            item.count += food.count;
+          }
+        });
+        if (!isFoodExist) state.backet.push(food);
+      } else {
+        state.backet.push(food);
+      }
+    },
+    DELETE_CART: (state, index) => {
+      state.backet.splice(index, 1);
     },
   },
   actions: {
-    /*      GET_ITEMS_FROM_API({ commit }) {
-return axios("/", {
-            method: "GET",
-          }).then((items) => {
-            commit(SET_ITEMS_TO_STATE, items);
-          });
-        }, */
-    ADD_TO_BASKET({ commit }, title) {
-      commit("SET_BASKET", title);
+    ADD_TO_BASKET({ commit }, food) {
+      commit("SET_BASKET", food);
+    },
+    DELETE_FROM_BASKET({ commit }, index) {
+      commit("DELETE_CART", index);
     },
   },
   state: {
@@ -48,9 +54,42 @@ return axios("/", {
           { title: "4 ножки", price: 8.9 },
         ],
       },
-      { id: 3, title: "Темпо" },
-      { id: 4, title: "ДоДо пицца" },
-      { id: 5, title: "Гирос-Кебаб" },
+      {
+        id: 3,
+        title: "Темпо",
+        food: [
+          { title: 'Пицца 31 см "4 сезона"', price: 22.80 },
+          { title: 'Пицца 31 см "Везувий"', price: 15.30 },
+          { title: 'Пицца 31 см "Пикантная"', price: 16.50 },
+          { title: 'Пицца 31 см "Супер Пепперони"', price: 20 },
+          { title: 'Пицца 31 см "Греческая"', price: 15.30 },
+          { title: 'Пицца 31 см "Маргарита"', price: 22.80 },
+        ],
+      },
+      {
+        id: 4,
+        title: "ДоДо пицца",
+        food: [
+          { title: 'Пицца 30 см "Домашняя"', price: 21.90 },
+          { title: 'Пицца 30 см "ДоДо Микс"', price: 29.90 },
+          { title: 'Пицца 30 см "Пепперони"', price: 21.90 },
+          { title: 'Пицца 30 см "Песто"', price: 27.90 },
+          { title: 'Пицца 30 см "Гавайская"', price: 24.90 },
+          { title: 'Пицца 30 см "Итальянская"', price: 24.90 },
+        ],
+      },
+      {
+        id: 5,
+        title: "Salad Drive",
+        food: [
+          { title: 'Кешью-кейк Кокос', price: 61 },
+          { title: 'Десерт с ореховой карамелью', price: 59.09 },
+          { title: 'Кешью-кейк Лимонный', price: 55.85 },
+          { title: 'Торт грильяжный', price: 58.30 },
+          { title: 'Торт детский Микки-Маус', price: 57.60 },
+          { title: 'Торт Зимняя вишня', price: 41.50 },
+        ],
+      },
     ],
     backet: [],
   },

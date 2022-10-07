@@ -4,8 +4,7 @@
       <FoodCard
         v-for="item in items"
         :key="item"
-        :title="item.title"
-        :price="item.price"
+        :item="item"
         @handleFoodClick="addToBasket"
       />
     </div>
@@ -15,11 +14,6 @@
 import FoodCard from "@/components/UI/FoodCard.vue";
 import { mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      /*       basket: [], */
-    };
-  },
   components: {
     FoodCard,
   },
@@ -29,17 +23,15 @@ export default {
       let food = {
         title,
         count,
-        price: price*count
+        price,
       };
       this.ADD_TO_BASKET(food);
-      /*       this.basket.push({count, title})
-      console.log(this.basket) */
     },
   },
   props: {
     items: {
-      type: Array,
-      default: [],
+      type: Object,
+      default: {},
     },
   },
 };
