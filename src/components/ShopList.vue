@@ -43,12 +43,13 @@ export default {
 <style lang="scss">
 .shop-list {
   background: transparent;
-  width: 411px;
+  width: 300px;
   height: auto;
   display: flex;
   flex-direction: column;
 }
 .utp {
+  margin-top: 30px;
   width: 252px;
   height: 185px;
   left: 0px;

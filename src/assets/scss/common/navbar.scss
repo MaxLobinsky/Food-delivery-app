@@ -17,13 +17,23 @@
 
 .navbar-logo {
   color: $g-999;
-  font-weight: 700;
+  font-weight: 600;
+  font-size: 14px;
+  width: 53px;
+  height: 33.41px;
+  left: 120px;
+  top: 36.59px;
+  color: #FFFEFE;
+  background: #85BF0D;
+  border-radius: 0px 270px;
+  padding: 5px 5px 5px 5px;
 }
 
 .navbar-list {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 138px;
 }
 
 .navbar-item {
@@ -37,7 +47,12 @@
 .navbar-link {
   display: block;
   transition: all 0.2s ease;
-  color: $purple-color-100;
+  color: #4D4C4C;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
   // active link
   &.isActive,
   &.router-link-active,

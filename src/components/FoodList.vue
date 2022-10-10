@@ -1,5 +1,4 @@
 <template>
-  <div>
     <div class="food-list">
       <FoodCard
         v-for="item in items"
@@ -8,7 +7,6 @@
         @handleFoodClick="addToBasket"
       />
     </div>
-  </div>
 </template>
 <script>
 import FoodCard from "@/components/UI/FoodCard.vue";
@@ -41,8 +39,8 @@ export default {
 .food-list {
   background: transparent;
   width: 70%;
-  height: auto;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, auto);
+  grid-template-columns: repeat(2, 464px);
 }
 </style>
