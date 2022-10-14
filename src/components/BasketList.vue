@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div class="basket-list">
+    <p v-if="items.length < 1">Сделайте заказ</p>
+    <div v-if="items.length > 0" class="basket-list">
       <BasketCard
         v-for="(item, index) in items"
         :key="item"
@@ -11,7 +12,7 @@
     </div>
     <div v-if="items.length" class="basket-total">
       <p class="total-name">Итого:</p>
-      <p>{{ basketTotalCost }} BYN</p>
+      <p class="total-count">{{ basketTotalCost }} BYN</p>
     </div>
   </div>
 </template>
@@ -60,19 +61,34 @@ export default {
 </script>
   <style lang="scss">
 .basket-list {
-  background: transparent;
-  width: 70%;
-  height: auto;
-  display: grid;
+  background: #ffffff;
+  width: 720px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 .basket-total {
   display: flex;
-  position: fixed;
+  position: relative;
   bottom: 0;
   margin: 16px;
   justify-content: center;
 }
 .total-name {
   margin-right: 8px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4d4c4c;
+}
+.total-count {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
 }
 </style>

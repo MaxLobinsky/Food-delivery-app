@@ -44,7 +44,7 @@ export default {
 .shop-list {
   background: transparent;
   width: 300px;
-  height: auto;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }

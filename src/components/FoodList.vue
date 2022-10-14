@@ -1,12 +1,12 @@
 <template>
-    <div class="food-list">
-      <FoodCard
-        v-for="item in items"
-        :key="item"
-        :item="item"
-        @handleFoodClick="addToBasket"
-      />
-    </div>
+  <div class="food-list">
+    <FoodCard
+      v-for="item in items"
+      :key="item"
+      :item="item"
+      @handleFoodClick="addToBasket"
+    />
+  </div>
 </template>
 <script>
 import FoodCard from "@/components/UI/FoodCard.vue";
@@ -35,12 +35,13 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .food-list {
   background: transparent;
   width: 70%;
-  height: 100%;
+  height: 80vh;
   display: grid;
   grid-template-columns: repeat(2, 464px);
+  overflow-y: auto;
 }
 </style>

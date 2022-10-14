@@ -47,7 +47,7 @@ export default {
 };
 </script>
 
-  <style>
+  <style lang="scss">
 .btn-text {
   color: #ffffff;
 }
@@ -55,12 +55,16 @@ export default {
   text-align: center;
 }
 .basket-card {
-  width: 404px;
-  height: 220px;
+  width: 694px;
+  height: 310px;
   left: 41px;
   top: 30px;
+  margin-bottom: 5px;
+  margin-left: 6px;
   background: #ffffff;
-  margin: 25px;
-  box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.06);
+  flex-shrink: 0;
+  &:hover {
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+  }
 }
 </style>

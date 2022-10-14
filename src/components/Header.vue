@@ -3,7 +3,9 @@
     <div class="container">
       <div class="navbar-content">
         <router-link class="navbar-logo" to="/">{{ title }}</router-link>
-        <p>+375(29)555 55 55</p>
+        <div class="telephone">
+          <p>+375(29)555 55 55</p>
+        </div>
         <!--         <ul class="navbar-list">
           <li class="navbar-item">
             <router-link class="navbar-link" :to="links[1].url">{{
@@ -11,7 +13,8 @@
             }}</router-link>
           </li>
         </ul> -->
-        <div class="basket-value" v-if="BASKET.length > 0">
+        <img class="basket-logo" src="@/assets/images/icon.svg" alt="">
+        <div v-if="BASKET.length>0" class="basket-value">
           ({{ BASKET.length }})
         </div>
       </div>
@@ -36,11 +39,27 @@ export default {
 </script>
 
 <style lang="scss">
+.telephone {
+  margin-left: 50px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  color: #4a4a4a;
+}
+.basket-logo {
+  margin-left: 935px;
+  margin-bottom: 7px;
+}
 .basket-value {
-  position: absolute;
   width: 19px;
   height: 20.25px;
-  left: 1301px;
-  top: 49.41px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 140%;
+  color: #4a4a4a;
 }
 </style>

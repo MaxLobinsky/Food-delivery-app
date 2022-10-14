@@ -1,7 +1,7 @@
 <template>
   <div class="form-list">
     <div class="utp">
-      <div class="utp-text">Ха-ха-ха тут будет клиентская форма</div>
+      <div class="utp-text">Для оформления заказа заполните форму ниже</div>
     </div>
     <div class="shops">
       <div class="client-form"></div>
@@ -19,7 +19,7 @@ export default {
 .form-list {
   background: transparent;
   width: 800px;
-  height: auto;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }

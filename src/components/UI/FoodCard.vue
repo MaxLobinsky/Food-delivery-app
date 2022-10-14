@@ -59,15 +59,20 @@ export default {
   border-radius: 0px 125px 0px 150px;
   margin: 30px;
   box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.06);
+  &:hover {
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.06);
+  }
 }
 
 .food-card-img {
   width: 185px;
   height: 185px;
+  max-width: 185px;
+  max-height: 185px;
   margin-left: 20px;
   margin-top: 10px;
-  background: #939393;
-  border: 1.09444px solid #dad7d7;
+  background: #FFFFFF;
+  border: 1.09444px solid #FFFFFF;
   border-radius: 197px;
 }
 .food-card-info {
@@ -80,6 +85,8 @@ export default {
   flex-direction: row;
 }
 .food-card-title {
+  max-height: 22px;
+  max-width: 165px;
   margin-top: 35px;
   margin-bottom: 42px;
   font-family: "Montserrat";
@@ -101,24 +108,21 @@ export default {
   margin-bottom: 40px;
   background: #6fa701;
   border-radius: 5px;
+  &:active {
+    background-color: #9ddd2a;
+  }
 }
 .food-card-btn-text {
   color: #ffffff;
 }
 
 .food-card-price-input {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   align-items: flex-end;
   padding: 2px 2px;
   margin-left: 13px;
   margin-right: 13px;
   width: 20px;
   height: 20px;
-  left: 247.12px;
-  top: 99px;
   background: #ffffff;
   font-family: "Montserrat";
   font-style: normal;
