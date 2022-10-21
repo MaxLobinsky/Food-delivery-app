@@ -6,15 +6,10 @@
         <div class="telephone">
           <p>+375(29)555 55 55</p>
         </div>
-        <!--         <ul class="navbar-list">
-          <li class="navbar-item">
-            <router-link class="navbar-link" :to="links[1].url">{{
-              links[1].title
-            }}</router-link>
-          </li>
-        </ul> -->
-        <img class="basket-logo" src="@/assets/images/icon.svg" alt="">
-        <div v-if="BASKET.length>0" class="basket-value">
+        <router-link class="basket-logo" to="/basket"
+          ><img src="@/assets/images/icon.svg" alt=""
+        /></router-link>
+        <div v-if="BASKET.length > 0" class="basket-value">
           ({{ BASKET.length }})
         </div>
       </div>

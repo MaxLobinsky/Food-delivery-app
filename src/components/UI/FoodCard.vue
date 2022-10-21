@@ -105,6 +105,7 @@ export default {
   padding: 10px 12px 10px 12px;
   width: 133px;
   height: 40px;
+  cursor: pointer;
   margin-bottom: 40px;
   background: #6fa701;
   border-radius: 5px;

@@ -1,4 +1,6 @@
 import Vuex from "vuex";
+import createPersistedState from 'vuex-persistedstate';
+import items from "@/seeders/items.json"
 
 let store = new Vuex.Store({
   mutations: {
@@ -29,7 +31,8 @@ let store = new Vuex.Store({
     },
   },
   state: {
-    items: [
+    items: items
+/*     [
       {
         id: 1,
         title: "McDonald",
@@ -90,7 +93,7 @@ let store = new Vuex.Store({
           { title: 'Торт Зимняя вишня', price: 41.50 },
         ],
       },
-    ],
+    ] */,
     backet: [],
   },
   getters: {
@@ -102,6 +105,8 @@ let store = new Vuex.Store({
     },
   },
   modules: {},
+  plugins: [createPersistedState()],
+
 });
 
 export default store;
