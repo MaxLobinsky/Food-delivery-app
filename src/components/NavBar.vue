@@ -43,7 +43,6 @@ export default {
 }
 .advertising {
   margin-left: 0px;
-  font-family: "Inter";
   font-style: normal;
   font-weight: 700;
   font-size: 39px;

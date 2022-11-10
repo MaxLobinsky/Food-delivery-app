@@ -1,16 +1,18 @@
 <template>
   <div class="basket-card">
-    <div>
-      <div>{{ item.title }}</div>
-      <div>{{ (item.price * item.count).toFixed(2) }} BYN</div>
-      <input class="food-prise" v-model="item.count" />
-      <button @click="countMinus">-</button>
-      <button @click="countPlus">+</button>
-      <span style="cursor: pointer" @click="deleteFromBasket">X</span>
-      <!--       <button @click="onSubmit" class="btn">
-        <div class="btn-text">Заказать</div>
-      </button> -->
+    <div class="basket-card-img"></div>
+    <div class="basket-card-info">
+      <div class="basket-card-title">{{ item.title }}</div>
+      <div class="basket-card-count">
+        <button class="basket-card-count-button" @click="countMinus">-</button>
+        <input class="basket-card-price-input" v-model="item.count" />
+        <button class="basket-card-count-button" @click="countPlus">+</button>
+        <div class="basket-card-price">
+          {{ (item.price * item.count).toFixed(2) }} BYN
+        </div>
+      </div>
     </div>
+    <span class="remove-btn" style="cursor: pointer" @click="deleteFromBasket">X</span>
   </div>
 </template>
 
@@ -47,24 +49,106 @@ export default {
 };
 </script>
 
-  <style lang="scss">
-.btn-text {
-  color: #ffffff;
-}
-.food-prise {
-  text-align: center;
+<style lang="scss">
+.remove-btn {
+  position: relative;
+  left: 135px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #E6E6E6;
+  font-size: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
 }
 .basket-card {
   width: 694px;
   height: 310px;
   left: 41px;
   top: 30px;
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 38px;
   margin-left: 6px;
   background: #ffffff;
   flex-shrink: 0;
   &:hover {
     box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
   }
+}
+.basket-card-img {
+  width: 250px;
+  height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1.09444px solid #ffffff;
+  border-radius: 197px;
+}
+.basket-card-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+}
+.basket-card-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4c4c;
+  margin-top: 90px;
+}
+.basket-card-count {
+  display: flex;
+  flex-direction: row;
+  margin-top: 42px;
+}
+.basket-card-count-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 4px;
+  width: 23.37px;
+  height: 29px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.basket-card-price-input {
+  display: flex;
+  align-items: center;
+  padding: 2px 2px;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: 23.37px;
+  height: 29px;
+  background: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  border-radius: 0;
+}
+.basket-card-price {
+  margin-left: 60px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
 }
 </style>

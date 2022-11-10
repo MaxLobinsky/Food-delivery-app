@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-if="items.length < 1">Сделайте заказ</p>
+    <div v-if="items.length < 1" class="basket-null">Ожидаем Ваш заказ!</div>
     <div v-if="items.length > 0" class="basket-list">
       <BasketCard
         v-for="(item, index) in items"
@@ -61,12 +61,29 @@ export default {
 </script>
   <style lang="scss">
 .basket-list {
+  margin-top: 70px;
   background: #ffffff;
   width: 720px;
   height: 670px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+}
+.basket-null {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  width: 720px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: #4d4c4c;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 24px;
 }
 .basket-total {
   display: flex;

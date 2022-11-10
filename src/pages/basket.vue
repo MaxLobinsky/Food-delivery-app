@@ -31,6 +31,7 @@ export default {
 <style>
 .basket-container {
   width: 100%;
+  height: 80vh;
   display: flex;
   flex-direction: row;
 }
