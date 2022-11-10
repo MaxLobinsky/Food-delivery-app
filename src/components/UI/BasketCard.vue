@@ -12,7 +12,9 @@
         </div>
       </div>
     </div>
-    <span class="remove-btn" style="cursor: pointer" @click="deleteFromBasket">X</span>
+    <div class="remove-btn" style="cursor: pointer" @click="deleteFromBasket"
+      >X</div
+    >
   </div>
 </template>
 
@@ -51,14 +53,14 @@ export default {
 
 <style lang="scss">
 .remove-btn {
-  position: relative;
-  left: 135px;
+  margin-top: 10px;
+  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 20px;
   height: 20px;
-  color: #E6E6E6;
+  color: #4d4c4c;
   font-size: 15px;
   font-family: "Montserrat";
   font-style: normal;
@@ -71,13 +73,15 @@ export default {
   top: 30px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 38px;
+  margin-bottom: 6px;
   margin-left: 6px;
   background: #ffffff;
+  border-radius: 4px;
   flex-shrink: 0;
-  &:hover {
+  box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+  /*   &:hover {
     box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
-  }
+  } */
 }
 .basket-card-img {
   width: 250px;

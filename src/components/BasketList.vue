@@ -64,10 +64,12 @@ export default {
   margin-top: 70px;
   background: #ffffff;
   width: 720px;
-  height: 670px;
+  height:auto;
+  max-height: 670px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  border-radius: 5px;
 }
 .basket-null {
   display: flex;
