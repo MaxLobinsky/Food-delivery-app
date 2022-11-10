@@ -1,27 +1,79 @@
 <template>
   <div class="form-list">
-    <div class="utp">
-      <div class="utp-text">Для оформления заказа заполните форму ниже</div>
-    </div>
-    <div class="shops">
-      <div class="client-form"></div>
-    </div>
+    <form class="form" action="">
+      <div class="">
+        <div class="form-text">Для оформления заказа заполните форму ниже:</div>
+      </div>
+      <input class="form-input" type="text" placeholder="Ваше имя" required />
+      <input
+        class="form-input"
+        type="email"
+        placeholder="Электронная почта"
+        required
+      />
+      <input
+        class="form-input"
+        type="tel"
+        placeholder="Номер телефона"
+        required
+      />
+      <input
+        class="form-input"
+        type="text"
+        placeholder="Адрес доставки"
+        required
+      />
+      <button class="form-btn">Заказать</button>
+    </form>
   </div>
 </template>
-  
-  <script>
+
+<script>
 export default {
   methods: {},
 };
 </script>
-  
-  <style>
+
+<style lang="scss">
+.form {
+  width: 406px;
+  height: 383px;
+}
 .form-list {
   background: transparent;
-  width: 800px;
+  width: 35%;
   height: 80vh;
   display: flex;
   flex-direction: column;
+}
+.form-input {
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  height: 80px;
+}
+.form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 12px;
+  width: 133px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: #ffffff;
+  border-color: #6fa701;
+  background: #6fa701;
+  border-radius: 5px;
+  &:active {
+    background-color: #9ddd2a;
+  }
 }
 .utp {
   width: 252px;
@@ -30,9 +82,15 @@ export default {
   top: 0px;
   background-color: #6fa701;
 }
-.utp-text {
-  color: #ffffff;
-  padding: 20px 33px 40px 30px;
+.form-text {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4c4c;
 }
 .client-form {
   box-sizing: border-box;
