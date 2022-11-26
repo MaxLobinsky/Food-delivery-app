@@ -1,6 +1,6 @@
 <template>
   <div class="food-card">
-    <div class="food-card-img"></div>
+    <div class="food-card-img">Изображение</div>
     <div class="food-card-info">
       <div class="food-card-title">{{ item.title }}</div>
       <div class="food-card-count">
@@ -65,6 +65,9 @@ export default {
 }
 
 .food-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 185px;
   height: 185px;
   max-width: 185px;
