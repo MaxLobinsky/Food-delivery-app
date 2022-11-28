@@ -32,29 +32,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.telephone {
-  margin-left: 50px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 140%;
-  color: #4a4a4a;
-}
-.basket-logo {
-  margin-left: 935px;
-  margin-bottom: 7px;
-}
-.basket-value {
-  width: 19px;
-  height: 20.25px;
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 300;
-  font-size: 14px;
-  line-height: 140%;
-  color: #4a4a4a;
-}
-</style>
