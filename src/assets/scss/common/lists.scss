@@ -1,153 +1,153 @@
 .basket-list {
-    margin-top: 70px;
-    background: #ffffff;
-    width: 720px;
-    height:auto;
-    max-height: 670px;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    border-radius: 5px;
-  }
-  .basket-null {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 70px;
-    width: 720px;
-    height: 670px;
-    display: flex;
-    flex-direction: column;
-    font-family: "Montserrat";
-    font-style: normal;
-    color: #4d4c4c;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 24px;
-  }
-  .basket-total {
-    display: flex;
-    position: relative;
-    bottom: 0;
-    margin: 16px;
-    justify-content: center;
-  }
-  .total-name {
-    margin-right: 8px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 17px;
-    color: #4d4c4c;
-  }
-  .total-count {
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-  }
-  .food-list {
-    background: transparent;
-    width: 70%;
-    height: 80vh;
-    display: grid;
-    grid-template-columns: repeat(2, 464px);
-    overflow-y: auto;
-  }
-  .shop-list {
-    background: transparent;
-    width: 300px;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .utp {
-    margin-top: 30px;
-    width: 252px;
-    height: 185px;
-    left: 0px;
-    top: 0px;
-    background-color: #6fa701;
-  }
-  .utp-text {
-    color: #ffffff;
-    padding: 20px 33px 40px 30px;
-  }
-  .shop {
-    box-sizing: border-box;
-    width: 252px;
-    height: 42px;
-    background-color: #c0ef69;
-    border-bottom: 3px solid #ffffff;
-    padding-left: 30px;
-    &.isActive {
-      background-color: #9ddd2a;
-    }
-  }
-  .shop:hover {
-    background-color: #9ddd2a;
-    cursor: pointer;
-  }
-  .isActive {
+  margin-top: 70px;
+  background: #ffffff;
+  width: 720px;
+  height: auto;
+  max-height: 670px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  border-radius: 5px;
+}
+.basket-null {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+  width: 720px;
+  height: 670px;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat";
+  font-style: normal;
+  color: #4d4c4c;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 24px;
+}
+.basket-total {
+  display: flex;
+  position: relative;
+  bottom: 0;
+  margin: 16px;
+  justify-content: center;
+}
+.total-name {
+  margin-right: 8px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #4d4c4c;
+}
+.total-count {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+}
+.food-list {
+  background: transparent;
+  width: 70%;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 464px);
+  overflow-y: auto;
+}
+.shop-list {
+  background: transparent;
+  width: 300px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.utp {
+  margin-top: 30px;
+  width: 252px;
+  height: 185px;
+  left: 0px;
+  top: 0px;
+  background-color: #6fa701;
+}
+.utp-text {
+  color: #ffffff;
+  padding: 20px 33px 40px 30px;
+}
+.shop {
+  box-sizing: border-box;
+  width: 252px;
+  height: 42px;
+  background-color: #c0ef69;
+  border-bottom: 3px solid #ffffff;
+  padding-left: 30px;
+  &.isActive {
     background-color: #9ddd2a;
   }
-  .form {
-    width: 406px;
-    height: 383px;
+}
+.shop:hover {
+  background-color: #9ddd2a;
+  cursor: pointer;
+}
+.isActive {
+  background-color: #9ddd2a;
+}
+.form {
+  width: 406px;
+  height: 383px;
+}
+.form-list {
+  background: transparent;
+  width: 35%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.form-input {
+  border-radius: 0;
+  background-color: transparent;
+  color: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  height: 80px;
+}
+.form-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 12px;
+  width: 133px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  color: #ffffff;
+  border-color: #6fa701;
+  background: #6fa701;
+  border-radius: 5px;
+  &:active {
+    background-color: #9ddd2a;
   }
-  .form-list {
-    background: transparent;
-    width: 35%;
-    height: 80vh;
-    display: flex;
-    flex-direction: column;
-  }
-  .form-input {
-    border-radius: 0;
-    background-color: transparent;
-    color: #ffffff;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 24px;
-    height: 80px;
-  }
-  .form-btn {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 12px 10px 12px;
-    width: 133px;
-    height: 40px;
-    cursor: pointer;
-    margin-bottom: 40px;
-    color: #ffffff;
-    border-color: #6fa701;
-    background: #6fa701;
-    border-radius: 5px;
-    &:active {
-      background-color: #9ddd2a;
-    }
-  }
-  .form-text {
-    margin-top: 70px;
-    margin-bottom: 30px;
-    font-family: "Montserrat";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    color: #4d4c4c;
-  }
-  .client-form {
-    box-sizing: border-box;
-    width: 252px;
-    height: 250px;
-    background-color: #c0ef69;
-    border-bottom: 3px solid #ffffff;
-    padding-left: 30px;
-  }
+}
+.form-text {
+  margin-top: 70px;
+  margin-bottom: 30px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4c4c;
+}
+.client-form {
+  box-sizing: border-box;
+  width: 252px;
+  height: 250px;
+  background-color: #c0ef69;
+  border-bottom: 3px solid #ffffff;
+  padding-left: 30px;
+}
