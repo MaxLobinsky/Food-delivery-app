@@ -47,3 +47,223 @@
 //   margin-bottom: 16px;
 // }
  */
+ .remove-btn {
+  margin-top: 10px;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  color: #4d4c4c;
+  font-size: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+}
+.basket-card {
+  width: 694px;
+  height: 310px;
+  left: 41px;
+  top: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+  margin-left: 6px;
+  background: #ffffff;
+  border-radius: 4px;
+  flex-shrink: 0;
+  box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+  /*   &:hover {
+    box-shadow: -5px 5px 4px rgba(0, 0, 0, 0.25);
+  } */
+}
+.basket-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 250px;
+  max-width: 250px;
+  max-height: 250px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #ffffff;
+  border: 1.09444px solid #ffffff;
+  border-radius: 197px;
+}
+.basket-card-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+}
+.basket-card-title {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4c4c;
+  margin-top: 90px;
+}
+.basket-card-count {
+  display: flex;
+  flex-direction: row;
+  margin-top: 42px;
+}
+.basket-card-count-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 4px;
+  width: 23.37px;
+  height: 29px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  color: #000000;
+}
+.basket-card-price-input {
+  display: flex;
+  align-items: center;
+  padding: 2px 2px;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: 23.37px;
+  height: 29px;
+  background: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  color: #000000;
+  border-radius: 0;
+}
+.basket-card-price {
+  margin-left: 60px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #222222;
+}
+.food-card {
+  display: flex;
+  flex-direction: row;
+  width: 404px;
+  height: 220px;
+  background: #ffffff;
+  border-radius: 0px 125px 0px 150px;
+  margin: 30px;
+  box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.06);
+  &:hover {
+    box-shadow: -10px 10px 4px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.food-card-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 185px;
+  height: 185px;
+  max-width: 185px;
+  max-height: 185px;
+  margin-left: 20px;
+  margin-top: 10px;
+  background: #FFFFFF;
+  border: 1.09444px solid #FFFFFF;
+  border-radius: 197px;
+}
+.food-card-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 13px;
+}
+.food-card-count {
+  display: flex;
+  flex-direction: row;
+}
+.food-card-title {
+  max-height: 22px;
+  max-width: 165px;
+  margin-top: 35px;
+  margin-bottom: 42px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  color: #4d4c4c;
+}
+
+.food-card-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 12px 10px 12px;
+  width: 133px;
+  height: 40px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  background: #6fa701;
+  border-radius: 5px;
+  &:active {
+    background-color: #9ddd2a;
+  }
+}
+.food-card-btn-text {
+  color: #ffffff;
+}
+
+.food-card-price-input {
+  align-items: flex-end;
+  padding: 2px 2px;
+  margin-left: 13px;
+  margin-right: 13px;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  color: #000000;
+  border-radius: 0;
+}
+.food-card-price {
+  margin-left: 35px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+}
+
+.food-card-count-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 4px;
+  width: 14.88px;
+  height: 20px;
+  left: 275.12px;
+  top: 99px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+}

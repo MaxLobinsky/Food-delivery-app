@@ -34,14 +34,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-.food-list {
-  background: transparent;
-  width: 70%;
-  height: 80vh;
-  display: grid;
-  grid-template-columns: repeat(2, 464px);
-  overflow-y: auto;
-}
-</style>

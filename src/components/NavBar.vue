@@ -27,25 +27,3 @@ export default {
   },
 };
 </script>
-
-
-<style>
-.navbar-shop {
-  display: flex;
-  width: 100%;
-  height: 55px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 39px;
-  line-height: 140%;
-  color: #4d4c4c;
-}
-.advertising {
-  margin-left: 0px;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 39px;
-  line-height: 140%;
-}
-</style>
